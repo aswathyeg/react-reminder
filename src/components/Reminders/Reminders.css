@@ -1,16 +1,6 @@
-body {font-family: Arial, Helvetica, sans-serif;}
+/* body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
-/* .outer{
-  display: "flex";
-  flexWrap: "wrap";
-  position: "absolute";
-  top: 0;
-  left: 0,
-  height: "100%",
-  width: "100%",
-  alignItems: "center"
 
-} */
   .form-inline {  
     display: flex;
     flex-flow: row wrap;
@@ -55,4 +45,4 @@ body {font-family: Arial, Helvetica, sans-serif;}
   }
   .remove:hover {
     background-color: rgb(187, 43, 43);
-  }
+  } */
