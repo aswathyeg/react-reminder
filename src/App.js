@@ -1,11 +1,11 @@
 
 import './App.css';
-import RemindersFunction from './components/Reminders/Remindersfunction';
+import Reminders from './components/Reminders/Reminders';
 
 function App() {
   return (
     <div className="App">
-      <RemindersFunction/>
+      <Reminders/>
      
     </div>
   );

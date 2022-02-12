@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
-import './Reminders.css'
+import React, { useState } from 'react';
+import './Reminders.css';
 
 const RemindersFunction = () => {
 
-    const [formValues, setFormValues] = useState([{ name: "", email : ""}])
+    const [formValues, setFormValues] = useState([{ name: ""}])
 
-    let handleChange = (i, e) => {
+    let handleChange = ( i,e) => {
         let newFormValues = [...formValues];
         newFormValues[i][e.target.name] = e.target.value;
         setFormValues(newFormValues);
       }
     
     let addFormFields = () => {
-        setFormValues([...formValues, { name: "", email: "" }])
+        setFormValues([...formValues, { name: ""}])
       }
     
-    let removeFormFields = (i) => {
+    let removeFormFields = (e) => {
         let newFormValues = [...formValues];
-        newFormValues.splice(i, 1);
+        newFormValues.splice(e, 1);
         setFormValues(newFormValues)
     }
     
@@ -28,12 +28,13 @@ const RemindersFunction = () => {
 
     return (
         <form  onSubmit={handleSubmit}>
+         
           {formValues.map((element, index) => (
             <div className="form-inline" key={index}>
               <label>Name</label>
               <input type="text" name="name" value={element.name || ""} onChange={e => handleChange(index, e)} />
-              <label>Email</label>
-              <input type="text" name="email" value={element.email || ""} onChange={e => handleChange(index, e)} />
+              {/* <label>Email</label>
+              <input type="text" name="email" value={element.email || ""} onChange={e => handleChange(index, e)} /> */}
               {
                 index ? 
                   <button type="button"  className="button remove" onClick={() => removeFormFields(index)}>Remove</button> 

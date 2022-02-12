@@ -1,10 +1,21 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
+/* .outer{
+  display: "flex";
+  flexWrap: "wrap";
+  position: "absolute";
+  top: 0;
+  left: 0,
+  height: "100%",
+  width: "100%",
+  alignItems: "center"
 
+} */
   .form-inline {  
     display: flex;
     flex-flow: row wrap;
     align-items: center;
+    justify-content: center !important;
   }
 
   .form-inline label {
@@ -15,12 +26,17 @@ body {font-family: Arial, Helvetica, sans-serif;}
     vertical-align: middle;
     margin: 5px 10px 5px 0;
     padding: 10px;
-    background-color: #fff;
+    background-color: rgb(6, 6, 143);
     border: 1px solid #ddd;
+   
   }
 
   .button-section {
     margin: 3%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center !important;
   }
   .button {
     padding: 10px 20px;
