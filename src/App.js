@@ -1,11 +1,13 @@
 
 import './App.css';
-import Reminders from './components/Reminders/Reminders';
+
+import AddUsers from './components/AgeProject/Users/AddUsers';
+
 
 function App() {
   return (
     <div className="App">
-      <Reminders/>
+      <AddUsers/>
      
     </div>
   );
