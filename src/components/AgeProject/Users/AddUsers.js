@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import Display from "../Display/Display";
+
 import Button from "../UI/Button";
 import Card from '../UI/Card';
 import classes from './AddUser.module.css';
+import UsersList from "./UsersList";
 
 
-const AddUsers = () => {
+const AddUsers = (props) => {
     const [username, SetUsername] = useState('');
     const [age, SetAge] = useState('');
     const[valid,setValid]=useState(true);
@@ -23,17 +24,18 @@ const AddUsers = () => {
             return(
             setValid(false))
         }
+        props.onValue(username,age); //calling parent's (App) function
         SetUsername('');
         SetAge('');
        
     }
 
 
-    const handleUsername=(e)=>{
+    const handleUsername=(e)=>{ //fetch username
         SetUsername(e.target.value)
              
     }
-    const handleAge=(e)=>{
+    const handleAge=(e)=>{ //fetch password
         SetAge( e.target.value )
         
     }
@@ -58,10 +60,7 @@ const AddUsers = () => {
                 <div>
                    <Button type = "submit" > Add User</Button>
                 </div>
-                <div>
-                    {/* <Display username={username}
-                        age={age} /> */}
-                </div>
+                
             </form>
         </Card>
     )
