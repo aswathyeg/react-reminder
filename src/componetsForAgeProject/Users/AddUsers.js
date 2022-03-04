@@ -1,4 +1,5 @@
 import React, { useState }  from "react";
+import Button from "../UI/Button";
 import Card from'../UI/Card';
 import classes from './AddUser.module.css';
 export default function AddUsers(props){
@@ -7,19 +8,18 @@ export default function AddUsers(props){
 
     const handleSubmit=(e)=>{
         e.preventDefault();
+        setUsername('');
+        setaAge('');
+        props.handleCallback(username.age);
 
     }
     const handleName=(e)=>{
         setUsername(e.target.value);
-        username('')
-
-
-
+      
     }
     const handleAge=(e)=>{
         setaAge(e.target.value)
-        age('');
-        
+        age('');        
     }
 
     return(
@@ -29,7 +29,7 @@ export default function AddUsers(props){
            <input type="text" value={ username} onChange={handleName}/>
            <label htmlFor=" age"/>
            <input type="text" value={age} onChange={handleAge}/>
-           <button type="submit">AddUser</button>
+           <Button type="submit">AddUser</Button>
 
        </form>
        </Card>
